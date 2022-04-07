@@ -10,3 +10,9 @@ A fer llista: 📝
  -3r. Música / efectes de so / refinar visuals 🎧
  -4t. Menú 📋
  (si sobra temps fer més batalles de caps)
+
+Assets:
+https://xenophero.itch.io/dance-game-arcade-machine
+https://lucapixel.itch.io/pixel-art-game-icons
+https://darkpixel-kronovi.itch.io/character-steven-free
+https://willipixel.itch.io/energy-cans
