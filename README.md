@@ -1,14 +1,14 @@
 # Hipòlit
 
-Una falla elèctrica causa que el protagonista (tècnic elèctric) es quedi tencat dins d'una sala de màquines recreatives. Per sortir, ha de trobar les 3 ùniques màquines enceses i passar-se els jocs. Un cop fet, l'electricitat torna i pot sortir.
+Una falla elèctrica causa que el protagonista (tècnic elèctric) es quedi tancat dins d'una sala de màquines recreatives. Per sortir, ha de trobar les 3 úniques màquines enceses i passar-se els jocs. Un cop fet, l'electricitat torna i pot sortir.
 
 Joc 2D amb batalles de caps:
  - Estil art pixelat 💪
- - 3 minijocs clàssics dels anys 80
- - Mapa 'top-down' com a interfície d'usuari (El personatge es mou dins una sala de màqines recreatives)
+ - 3 mini jocs clàssics dels anys 80
+ - Mapa 'top-down' com a interfície d'usuari (El personatge es mou dins una sala de màquines recreatives)
 
 A fer llista: 📝
- - 1r. MInijocs retro:
+ - 1r. MIni jocs retro:
       - Galaga
       - Duck Hunt
       - Donkey Kong
