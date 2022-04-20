@@ -1,4 +1,4 @@
-# Hipolit
+# Hipòlit
 
 Una falla elèctrica causa que el protagonista (tècnic elèctric) es quedi tencat dins d'una sala de màquines recreatives. Per sortir, ha de trobar les 3 ùniques màquines enceses i passar-se els jocs. Un cop fet, l'electricitat torna i pot sortir.
 
