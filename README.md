@@ -17,7 +17,7 @@ A fer llista: 📝
  - 4t. Menú 📋
  - 5è. Títol del joc
 
-Assets:
+Assets:/n
 https://xenophero.itch.io/dance-game-arcade-machine
 https://lucapixel.itch.io/pixel-art-game-icons
 https://darkpixel-kronovi.itch.io/character-steven-free
