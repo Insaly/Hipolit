@@ -24,3 +24,4 @@ Assets:
  - https://lucapixel.itch.io/pixel-art-game-icons
  - https://darkpixel-kronovi.itch.io/character-steven-free
  - https://willipixel.itch.io/energy-cans
+ - https://tilation.itch.io/16x16-small-indoor-tileset
