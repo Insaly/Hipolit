@@ -9,14 +9,15 @@ Característiques:
  - Si volem complicar el joc podem afegir-hi trencacaps per poder passar de sales.
 
 A fer llista: 📝
- - 1r. MIni jocs retro:
+ - 1r. Buscar assets
+ - 2n.	Programar els tres mini jocs retro (temps: 1 o 2 setmanes, cadascú en pot fer un):
       - Galaga
       - Duck Hunt
       - Donkey Kong
- - 2n. Mapa (interfície d'usuari) 🌍
- - 3r. Menú 📋
- - 4t. Música / efectes de so / refinar visuals 🎧
- - 5è. Títol del joc
+ - 3r. Crear el mapa per on es mou l’operari (sala de màquines recreatives) 🌍
+ - 4t. Crear un menú  📋
+ - 5è. Música / efectes de so / refinar visuals 🎧
+ - 6è. Títol del joc
 
 Assets:
  - https://xenophero.itch.io/dance-game-arcade-machine
