@@ -6,6 +6,7 @@ Joc 2D amb batalles de caps:
  - Estil art pixelat 💪
  - 3 mini jocs clàssics dels anys 80
  - Mapa 'top-down' com a interfície d'usuari (El personatge es mou dins una sala de màquines recreatives)
+ - Si volem complicar el joc podem afegir-hi trencacaps per poder passar de sales.
 
 A fer llista: 📝
  - 1r. MIni jocs retro:
@@ -13,11 +14,11 @@ A fer llista: 📝
       - Duck Hunt
       - Donkey Kong
  - 2n. Mapa (interfície d'usuari) 🌍
- - 3r. Música / efectes de so / refinar visuals 🎧
- - 4t. Menú 📋
+ - 3r. Menú 📋
+ - 4t. Música / efectes de so / refinar visuals 🎧
  - 5è. Títol del joc
 
-Assets:/n
+Assets:
 https://xenophero.itch.io/dance-game-arcade-machine
 https://lucapixel.itch.io/pixel-art-game-icons
 https://darkpixel-kronovi.itch.io/character-steven-free
