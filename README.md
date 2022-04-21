@@ -15,6 +15,7 @@ A fer llista: 📝
  - 2n. Mapa (interfície d'usuari) 🌍
  - 3r. Música / efectes de so / refinar visuals 🎧
  - 4t. Menú 📋
+ - 5è. Títol del joc
 
 Assets:
 https://xenophero.itch.io/dance-game-arcade-machine
