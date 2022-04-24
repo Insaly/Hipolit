@@ -25,3 +25,4 @@ Assets:
  - https://darkpixel-kronovi.itch.io/character-steven-free
  - https://willipixel.itch.io/energy-cans
  - https://tilation.itch.io/16x16-small-indoor-tileset
+ - https://groovymaster.itch.io/groovys-50-retro-sound-effects-package
