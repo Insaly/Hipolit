@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/death.wav-f8799c3f4e883b26b24679346de01234.sample"
+
+[deps]
+
+source_file="res://Donkey Kong/SFX/death.wav"
+dest_files=[ "res://.import/death.wav-f8799c3f4e883b26b24679346de01234.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
