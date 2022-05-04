@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/colidiu.wav-20625678632e2845e552369c12bd6788.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/sons/colidiu.wav"
+dest_files=[ "res://.import/colidiu.wav-20625678632e2845e552369c12bd6788.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

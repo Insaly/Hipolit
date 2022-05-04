@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cao_captura.wav-c718e6d7f8e3284270ef69bfc9cb9066.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/sons/cao_captura.wav"
+dest_files=[ "res://.import/cao_captura.wav-c718e6d7f8e3284270ef69bfc9cb9066.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

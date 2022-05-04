@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/round.wav-3eab73c2d661a5f7a34b03dd48391f84.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/sons/round.wav"
+dest_files=[ "res://.import/round.wav-3eab73c2d661a5f7a34b03dd48391f84.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
