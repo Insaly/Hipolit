@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tiro.wav-345e75f1e03a77346f0bce56641aa4a4.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/sons/tiro.wav"
+dest_files=[ "res://.import/tiro.wav-345e75f1e03a77346f0bce56641aa4a4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

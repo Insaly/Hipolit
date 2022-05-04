@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/flyaway.wav-596acd21d8f96e3be84078ac71032bcb.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/sons/flyaway.wav"
+dest_files=[ "res://.import/flyaway.wav-596acd21d8f96e3be84078ac71032bcb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
