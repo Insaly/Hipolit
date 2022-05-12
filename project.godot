@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "jugador",
+"language": "GDScript",
+"path": "res://Galaga/Escenes/Player.gd"
+} ]
+_global_script_class_icons={
+"jugador": ""
+}
+
 [application]
 
 config/name="Hipòlit"
@@ -67,6 +77,14 @@ Clic={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_render/layer_1="env"
+2d_render/layer_2="jugador"
+2d_render/layer_3="enemics"
+2d_render/layer_4="proj_jugador"
+2d_render/layer_5="proj_enemic"
 
 [physics]
 
