@@ -7,7 +7,7 @@ signal generar_proj(location)
 
 export var velocitat = 200
 var direccio = Vector2(0,0)
-var vides = 3
+var vides = 1
 
 
 func _process(delta):
@@ -20,7 +20,7 @@ func _process(delta):
 		
 	position += direccio.normalized() * velocitat * delta
 	
-	if Input.is_action_pressed("Tecla_x"):
+	if Input.is_action_just_pressed("Tecla_x"):
 		disparar()
 
 func _on_Player_area_entered(area):

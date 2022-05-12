@@ -23,6 +23,8 @@ animations = [ {
 radius = 5.0
 
 [node name="Abella" type="Area2D" groups=["enemics"]]
+rotation = 3.14159
+scale = Vector2( 2, 2 )
 collision_layer = 4
 collision_mask = 11
 script = ExtResource( 2 )
@@ -34,5 +36,8 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 4 )
+
+[node name="morrio" type="Position2D" parent="."]
+position = Vector2( 1.50002, -6.5 )
 
 [connection signal="area_entered" from="." to="." method="_on_Abella_area_entered"]

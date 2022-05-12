@@ -1,17 +1,21 @@
 extends Area2D
 
 var vides = 1
+onready var morrio = $morrio
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+signal generar_proj_enemic(location)
 
+func _process(delta):
+	if Input.is_action_just_pressed("Tecla_z"):
+		disparar()
 
 func rebre_mal(mal):
 	vides -= mal
-	if vides <= 0: 
+	if vides <= 0:
 		queue_free()
 
+func disparar():
+	emit_signal('generar_proj_enemic', morrio.global_position)
 
 func _on_Abella_area_entered(area):
 	if area is jugador:
