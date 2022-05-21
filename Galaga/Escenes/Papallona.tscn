@@ -22,9 +22,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=4]
 radius = 6.0
 
-[node name="Papallona" type="Area2D"]
+[node name="Papallona" type="Area2D" groups=["enemics"]]
 rotation = 3.14159
-scale = Vector2( 2, 2 )
+scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

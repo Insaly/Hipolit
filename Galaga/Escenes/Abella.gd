@@ -2,7 +2,7 @@ extends Area2D
 
 var vides = 1
 onready var morrio = $morrio
-var velocitat = -300
+var velocitat = -400
 
 signal generar_proj_enemic(location)
 

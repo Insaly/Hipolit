@@ -24,13 +24,14 @@ radius = 5.0
 
 [node name="Abella" type="Area2D" groups=["enemics"]]
 rotation = 3.14159
-scale = Vector2( 2, 2 )
+scale = Vector2( 2.5, 2.5 )
 collision_layer = 4
 collision_mask = 11
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

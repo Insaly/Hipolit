@@ -18,13 +18,13 @@ extents = Vector2( 288.25, 10.75 )
 [node name="Pantalla" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Lim_esquerra" type="StaticBody2D" parent="."]
+[node name="Lim_esquerra" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lim_esquerra"]
 position = Vector2( 662, 546 )
 shape = SubResource( 6 )
 
-[node name="Lim_dreta" type="StaticBody2D" parent="."]
+[node name="Lim_dreta" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lim_dreta"]
 position = Vector2( 1254.5, 547 )
@@ -33,12 +33,11 @@ shape = SubResource( 3 )
 [node name="Adalt" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Adalt"]
-position = Vector2( 960.25, 164 )
+position = Vector2( 960, 174 )
 shape = SubResource( 4 )
 
 [node name="Abaix" type="Area2D" parent="."]
 position = Vector2( -6.10352e-05, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Abaix"]
 position = Vector2( 960.75, 977.25 )
@@ -49,5 +48,7 @@ position = Vector2( 960, 540 )
 scale = Vector2( 4.50704, 4.5 )
 texture = ExtResource( 1 )
 
+[connection signal="area_entered" from="Lim_esquerra" to="." method="_on_Lim_esquerra_area_entered"]
+[connection signal="area_entered" from="Lim_dreta" to="." method="_on_Lim_dreta_area_entered"]
 [connection signal="area_entered" from="Adalt" to="." method="_on_Adalt_area_entered"]
 [connection signal="area_entered" from="Abaix" to="." method="_on_Abaix_area_entered"]
