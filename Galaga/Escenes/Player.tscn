@@ -22,14 +22,14 @@ region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Normal",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "Detonació",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Normal",
 "speed": 5.0
 } ]
 

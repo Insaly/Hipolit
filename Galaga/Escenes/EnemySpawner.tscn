@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Galaga/Escenes/EnemySpawner.gd" type="Script" id=1]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="SpawnPositions" type="Node2D" parent="."]
+
+[node name="SpawnPosition_01" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 1056, 165 )
+
+[node name="SpawnPosition_02" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 709, 165 )
+
+[node name="SpawnPosition_03" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 989, 165 )
+
+[node name="SpawnPosition_04" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 852, 165 )
+
+[node name="SpawnPosition_05" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 777, 165 )
+
+[node name="SpawnPosition_06" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 1119, 165 )
+
+[node name="SpawnPosition_08" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 923, 165 )
+
+[node name="SpawnPosition_07" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 1187, 165 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]

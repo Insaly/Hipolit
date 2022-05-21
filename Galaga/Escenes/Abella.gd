@@ -2,12 +2,12 @@ extends Area2D
 
 var vides = 1
 onready var morrio = $morrio
+var velocitat = -300
 
 signal generar_proj_enemic(location)
 
 func _process(delta):
-	if Input.is_action_just_pressed("Tecla_z"):
-		disparar()
+	global_position.y -= velocitat * delta
 
 func rebre_mal(mal):
 	vides -= mal

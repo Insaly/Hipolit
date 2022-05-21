@@ -1,31 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Galaga/Escenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Galaga/Escenes/Abella.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Galaga/Escenes/Pantalla.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Galaga/Galaga.gd" type="Script" id=3]
-[ext_resource path="res://Galaga/Escenes/Papallona.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Galaga/Escenes/Tocacampanes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Galaga/Escenes/EnemySpawner.tscn" type="PackedScene" id=4]
 
 [node name="Galaga" type="Node2D"]
 position = Vector2( 0, 2 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1036, 797 )
+position = Vector2( 943, 856 )
 scale = Vector2( 2, 2 )
 
-[node name="Abella" parent="." instance=ExtResource( 2 )]
-position = Vector2( 961, 541 )
+[node name="EnemySpawner" parent="." instance=ExtResource( 4 )]
 
-[node name="Papallona" parent="." groups=["enemics"] instance=ExtResource( 4 )]
-position = Vector2( 1038, 538 )
-
-[node name="Tocacampanes" parent="." groups=["enemics"] instance=ExtResource( 5 )]
-position = Vector2( 1131, 539 )
-
-[node name="Abella2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 837, 541 )
+[node name="Pantalla" parent="." instance=ExtResource( 2 )]
 
 [connection signal="generar_proj" from="Player" to="." method="_on_Player_generar_proj"]
-[connection signal="generar_proj_enemic" from="Abella" to="." method="_on_Abella_generar_proj_enemic"]
-[connection signal="generar_proj_enemic" from="Abella2" to="." method="_on_Abella_generar_proj_enemic"]
