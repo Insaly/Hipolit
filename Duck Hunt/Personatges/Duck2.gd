@@ -9,6 +9,7 @@ var cached = false
 var caient = false
 var go = false
 var mort = false
+signal dead
 
 func _ready():
 	randomize()
@@ -23,6 +24,8 @@ func _ready():
 	
 func _process(delta):
 	if cached:
+		get_parent().get_parent().anecs_morts += 1
+		get_parent().get_parent().anecs_totals += 1
 		dir = Vector2.ZERO
 		$Anima.stop()
 		$AnimatedSprite.play("Impacte")
@@ -68,11 +71,9 @@ func change_dir():
 
 func _on_KinematicBody2D_mouse_entered():
 	mouse_in = true
-	print ("in")
 
 func _on_KinematicBody2D_mouse_exited():
 	mouse_in = false
-	print ("out")
 
 
 func _on_Anima_timeout():
