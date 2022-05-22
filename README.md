@@ -28,3 +28,4 @@ Assets:
  - https://groovymaster.itch.io/groovys-50-retro-sound-effects-package
  - https://www.spriters-resource.com/nes/duckhunt/
  - <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+ - Credit DanSevenStar.xyz (Hearts Duck Hunt)
