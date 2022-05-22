@@ -98,7 +98,8 @@ margin_right = 96.0
 margin_bottom = 632.0
 rect_scale = Vector2( 3, 3 )
 max_value = 3.0
-value = 3.0
+value = 2.0
+rounded = true
 texture_progress = ExtResource( 7 )
 
 [node name="Hits" type="TextureProgress" parent="."]

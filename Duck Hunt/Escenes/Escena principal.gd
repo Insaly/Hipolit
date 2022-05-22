@@ -21,11 +21,11 @@ func _process(delta):
 	if ronda_over:
 		if vides <= 0:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena GameOver.tscn")
-		if ronda == 11:
+		if ronda == 10:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena Victòria.tscn")
 		ronda += 1
 		anecs_morts = 0
-		bales_restants = 3
+		bales_restants = 3+ronda
 		$Hits.value = 0
 		$Bullets.value = 3
 		
@@ -41,24 +41,8 @@ func _process(delta):
 		pass
 	else:
 		if Input.is_action_just_pressed("Clic"):
-			if ronda < 3:
-				bales_restants -= 1
-				$Bullets.value -= 1
-			elif ronda >= 3 and ronda < 6:
-				i += 1
-				if i%2 == 1:
-					pass
-				else:
-					bales_restants -= 1
-					$Bullets.value -= 1
-			else:
-				i += 1
-				if i%3 == 1 or i%3 == 2:
-					pass
-				else:
-					bales_restants -= 1
-					$Bullets.value -= 1
-			
+			bales_restants -= 1
+			$Bullets.value = (bales_restants/(3.0+ronda))*3
 			if bales_restants <= 0:
 					var anecs = $Anecs.get_children()
 					for anec in anecs:
