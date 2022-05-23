@@ -5,7 +5,7 @@ var velocitat_base = 50
 var velocitat = Vector2.ZERO
 
 var direccio = Vector2.DOWN
-var gravetat = Vector2.DOWN * 9800
+var gravetat = Vector2.DOWN * 980
 
 func _process(delta):
 	pass

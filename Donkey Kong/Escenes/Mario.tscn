@@ -1,25 +1,29 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Donkey Kong/Scripts/Mario.gd" type="Script" id=1]
 [ext_resource path="res://Donkey Kong/Assets/jumpmant.png" type="Texture" id=2]
 [ext_resource path="res://Donkey Kong/Assets/jumpman.png" type="Texture" id=3]
 [ext_resource path="res://Donkey Kong/SFX/jump.wav" type="AudioStream" id=4]
+[ext_resource path="res://Donkey Kong/Assets/Mort/4.png" type="Texture" id=5]
+[ext_resource path="res://Donkey Kong/Assets/Mort/5.png" type="Texture" id=6]
+[ext_resource path="res://Donkey Kong/Assets/Mort/2.png" type="Texture" id=7]
+[ext_resource path="res://Donkey Kong/Assets/Mort/1.png" type="Texture" id=8]
+[ext_resource path="res://Donkey Kong/Assets/Mort/3.png" type="Texture" id=9]
+[ext_resource path="res://Donkey Kong/SFX/walk.wav" type="AudioStream" id=10]
+[ext_resource path="res://Donkey Kong/SFX/death.wav" type="AudioStream" id=11]
+[ext_resource path="res://Donkey Kong/SFX/bacmusic.wav" type="AudioStream" id=12]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 3 )
-region = Rect2( 80, 0, 16, 16 )
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 16, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
-region = Rect2( 16, 16, 16, 16 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 3 )
@@ -33,13 +37,17 @@ region = Rect2( 64, 0, 16, 16 )
 atlas = ExtResource( 3 )
 region = Rect2( 64, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 16, 0, 16, 16 )
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 16, 16 )
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 16, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -48,9 +56,14 @@ animations = [ {
 "name": "normal",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
-"name": "cul",
+"name": "caminant",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "mort1",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 8 ) ],
@@ -58,26 +71,58 @@ animations = [ {
 "name": "salt",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "mort2",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "escalant",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "caminant",
+"name": "cul",
 "speed": 5.0
 } ]
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape2D" id=15]
+radius = 7.0
+height = 6.0
+
+[node name="Mario" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 0, 8, 1, 8, 8, 6, 8, 2, 8, -2, 6, -6, 2, -8, -2, -8, -6, -6, -7, 0, -7, 3, -7, 6 )
+polygon = PoolVector2Array( 0, 8, 1, 8, 6, 6, 6, 2, 6, -2, 5, -7, 2, -8, -2, -8, -3, -6, -5, 0, -5, 3, -5, 6 )
 
 [node name="Animacions" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-animation = "cul"
+animation = "normal"
+speed_scale = 1.4
+
+[node name="DeathSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -5.0
+
+[node name="WalkSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -20.0
 
 [node name="SaltSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -20.0
+
+[node name="MusicSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -5.0
+
+[node name="MortDeteccio" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MortDeteccio"]
+position = Vector2( 1, 0 )
+shape = SubResource( 15 )
+
+[connection signal="animation_finished" from="Animacions" to="." method="_on_Animacions_animation_finished"]
+[connection signal="body_entered" from="MortDeteccio" to="." method="_on_MortDeteccio_body_entered"]
