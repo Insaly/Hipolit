@@ -2,10 +2,22 @@
 
 [ext_resource path="res://Galaga/Escenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Galaga/Escenes/Abella.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Galaga/Escenes/Pantalla Joc Galaga.gd" type="Script" id=3]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var proj = preload(\"res://Galaga/Escenes/proj_jugador.tscn\")
+
+
+
+func _on_Player_generar_proj(location):
+	var p = proj.instance()
+	p.global_position = location
+	add_child(p)
+"
 
 [node name="pantalla" type="Node2D"]
-script = ExtResource( 3 )
+script = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 513, 435 )
