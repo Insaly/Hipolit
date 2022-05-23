@@ -8,6 +8,7 @@ var anecs_totals = 0
 var i = 0
 var ronda_over = true
 var wait = false
+var ronda_lost = false
 
 export var Duck2 : PackedScene
 
@@ -23,7 +24,10 @@ func _process(delta):
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena GameOver.tscn")
 		if ronda == 10:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena Victòria.tscn")
-		ronda += 1
+		if ronda_lost == false:
+			ronda += 1
+		else:
+			ronda_lost = false
 		anecs_morts = 0
 		bales_restants = 3+ronda
 		$Hits.value = 0
@@ -49,6 +53,7 @@ func _process(delta):
 						anec.queue_free()
 					vides -= 1
 					$Lives.value -= 1
+					ronda_lost = true
 					ronda_over = true
 		
 		$Control/Score.text = str(int(anecs_totals)*1000)
@@ -62,7 +67,7 @@ func start_round(ronda):
 	i = 0
 	for i in range(ronda):
 		var anec = Duck2.instance()
-		anec.global_position = Vector2(rand_range(40, 700), 300)
+		anec.global_position = Vector2(rand_range(40, 700), 300+180)
 		$Anecs.add_child(anec)
 
 
@@ -85,5 +90,6 @@ func _on_Timeout_timer_timeout():
 		anec.queue_free()
 	vides -= 1
 	$Lives.value -= 1
+	ronda_lost = true
 	ronda_over = true
 	$Timeout_timer.stop()
