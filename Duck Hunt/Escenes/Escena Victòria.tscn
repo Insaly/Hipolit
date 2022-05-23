@@ -10,6 +10,7 @@ size = 40
 font_data = ExtResource( 9 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 577.5, 180 )
 script = ExtResource( 3 )
 
 [node name="1StBackground" type="Sprite" parent="."]

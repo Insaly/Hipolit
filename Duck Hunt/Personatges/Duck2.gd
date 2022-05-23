@@ -13,7 +13,7 @@ signal dead
 
 func _ready():
 	randomize()
-	speed = rand_range(200, 500)
+	speed = rand_range(300, 500)
 	angle = rand_range(0, -PI/4)
 	dir = dir.rotated(angle)
 	dir.x *= (randi()%2)*2 - 1
@@ -36,7 +36,7 @@ func _process(delta):
 		speed = 0
 		dir = Vector2.DOWN
 		if go:
-			speed = 100
+			speed = 200
 			dir = Vector2.DOWN
 			$AnimatedSprite.play("Mort")
 			$Mort2.start()
@@ -65,7 +65,7 @@ func change_dir():
 		dir = Vector2.RIGHT
 		dir = dir.rotated(angle)
 		dir.x *= (randi()%2)*2 - 1
-		speed = rand_range(200, 500)
+		speed = rand_range(300, 500)
 		$moviment.wait_time = rand_range(0.6, 1.5)
 
 
