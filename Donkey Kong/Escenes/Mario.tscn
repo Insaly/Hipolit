@@ -25,18 +25,6 @@ region = Rect2( 16, 0, 16, 16 )
 atlas = ExtResource( 2 )
 region = Rect2( 32, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 3 )
-region = Rect2( 48, 0, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 3 )
-region = Rect2( 64, 0, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 3 )
 region = Rect2( 80, 0, 16, 16 )
@@ -48,6 +36,18 @@ region = Rect2( 0, 16, 16, 16 )
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 3 )
 region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -61,19 +61,14 @@ animations = [ {
 "name": "caminant",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "cul",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "mort1",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ) ],
-"loop": true,
-"name": "salt",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "mort2",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ) ],
@@ -81,17 +76,24 @@ animations = [ {
 "name": "escalant",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "cul",
+"name": "mort2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ) ],
+"loop": true,
+"name": "salt",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=15]
-radius = 7.0
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 6.0
 height = 6.0
 
 [node name="Mario" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -118,11 +120,12 @@ volume_db = -20.0
 stream = ExtResource( 12 )
 volume_db = -5.0
 
-[node name="MortDeteccio" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+collision_mask = 2048
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MortDeteccio"]
-position = Vector2( 1, 0 )
-shape = SubResource( 15 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 14 )
 
 [connection signal="animation_finished" from="Animacions" to="." method="_on_Animacions_animation_finished"]
-[connection signal="body_entered" from="MortDeteccio" to="." method="_on_MortDeteccio_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -6,13 +6,10 @@ var velocitat = Vector2.ZERO
 
 var direccio = Vector2.DOWN
 var gravetat = Vector2.DOWN * 980
-var velocitat_salt = -230
+var velocitat_salt = -240
 var contador_absurd = 0
 var escales = false
 var animacio = false
-
-func _process(delta):
-	pass
 
 func _physics_process(delta):
 	if contador_absurd < 1:
@@ -65,16 +62,13 @@ func anima(velocitat):
 			$Animacions.play("salt")
 
 func _on_Deteccions_body_entered(body):
-	print("HE ENTRAT")
-	body.set_collision_mask_bit(2, false)
+	body.set_collision_mask_bit(12, false)
 
-		
 func _on_Deteccions_body_exited(body):
-	body.set_collision_mask_bit(2, false)
-	print("HE SORTIT")
-
+	body.set_collision_mask_bit(12, true)
 
 func _on_MortDeteccio_body_entered(body):
+	print("AAA MORT")
 	if body is KinematicBody2D:
 		contador_absurd += 1
 
@@ -92,11 +86,11 @@ func _on_Escales_body_exited(body):
 	if body is KinematicBody2D:
 		escales = false
 
-
 func _on_MortBuit_body_entered(body):
-	print("TOCAT")
 	if body.is_in_group("Jugador"):
 		contador_absurd += 1
-		print("ENFONSAT")
 	else:
 		body.queue_free()
+
+func _on_Area2D_body_entered(body):
+	contador_absurd += 1

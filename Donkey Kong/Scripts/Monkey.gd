@@ -20,3 +20,7 @@ func _on_Animacions_animation_finished():
 		spawn_barril(Barril)
 		$Animacions.play("normal")
 		$Timer.set_wait_time(5)
+
+
+func _on_CanviDir_body_entered(body):
+	pass # Replace with function body.
