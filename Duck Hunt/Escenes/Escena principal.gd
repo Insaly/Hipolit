@@ -21,10 +21,12 @@ func _ready():
 func _process(delta):
 	if ronda_over:
 		if vides <= 0:
+			$DerrotaSFX.play()
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena GameOver.tscn")
 		if ronda == 10:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena Victòria.tscn")
 		if ronda_lost == false:
+			$RondaSFX.play()
 			ronda += 1
 		else:
 			ronda_lost = false
@@ -45,6 +47,7 @@ func _process(delta):
 		pass
 	else:
 		if Input.is_action_just_pressed("Clic"):
+			
 			bales_restants -= 1
 			$Bullets.value = (bales_restants/(3.0+ronda))*3
 			if bales_restants <= 0:
@@ -62,7 +65,6 @@ func _process(delta):
 			$Round_end_timer.start()
 			wait = true
 
-
 func start_round(ronda):
 	i = 0
 	for i in range(ronda):
@@ -70,19 +72,15 @@ func start_round(ronda):
 		anec.global_position = Vector2(rand_range(40, 700), 300+180)
 		$Anecs.add_child(anec)
 
-
 func _on_Start_timer_timeout():
 	$Round_title.visible = false
 	start_round(ronda)
 	$Start_timer.stop()
 
-
-
 func _on_Round_end_timer_timeout():
 	ronda_over = true
 	wait = false
 	$Round_end_timer.stop()
-
 
 func _on_Timeout_timer_timeout():
 	var anecs = $Anecs.get_children()

@@ -20,8 +20,10 @@ func _ready():
 
 func _process(delta):
 	if cacat:
+		$Anec1SFX.play()
 		dir = Vector2.ZERO
 	if caient:
+		$Anec2SFX.play()
 		dir = Vector2.DOWN
 		speed = 300
 	else:

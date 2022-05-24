@@ -22,6 +22,7 @@ func _process(delta):
 	position += direccio.normalized() * velocitat * delta
 	
 	if Input.is_action_just_pressed("Tecla_x") and vides > 0:
+		$DispararSFX.play()
 		disparar()
 
 func _on_Player_area_entered(area):
@@ -36,6 +37,7 @@ func _on_AnimatedSprite_animation_finished():
 	
 func rebre_mal(mal):
 	vides -= mal
+	$MortSFX.play()
 	emit_signal("nau_rebre_mal")
 	if vides <= 0: 
 		$AnimatedSprite.play("Detonació")

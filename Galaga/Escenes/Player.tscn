@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Galaga/Escenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://Galaga/Assets/ship.png" type="Texture" id=2]
 [ext_resource path="res://Galaga/Assets/ship-explode.png" type="Texture" id=3]
+[ext_resource path="res://Galaga/tret.wav" type="AudioStream" id=4]
+[ext_resource path="res://Galaga/mort.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -22,14 +24,14 @@ region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "Detonació",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Normal",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 1 ), SubResource( 2 ), SubResource( 2 ), SubResource( 3 ), SubResource( 3 ), SubResource( 4 ), SubResource( 4 ) ],
+"loop": true,
+"name": "Detonació",
 "speed": 5.0
 } ]
 
@@ -46,5 +48,11 @@ animation = "Normal"
 
 [node name="morrio" type="Position2D" parent="."]
 position = Vector2( -1, -9 )
+
+[node name="DispararSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="MortSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
