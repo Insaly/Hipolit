@@ -18,7 +18,7 @@ func _on_Timer_timeout():
 		i += 1
 	elif i == 2:
 		$Timer.stop()
-		$Timer.wait_time = 6
+		$Timer.wait_time = 8
 		$Label.text = "És per això que l'Arnau (un electricista d'èxit) ha sigut enviat durant la nit per a arreglar aquesta màquina."
 		$Timer.start()
 		i += 1
@@ -42,7 +42,7 @@ func _on_Timer_timeout():
 		i += 1
 	elif i == 6:
 		$Timer.stop()
-		$Timer.wait_time = 3
+		$Timer.wait_time = 5
 		$Label.text = "Bona sort, Arnau!"
 		$Timer.start()
 		i += 1

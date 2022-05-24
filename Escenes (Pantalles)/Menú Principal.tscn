@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Escenes (Pantalles)/Esteve.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/unknown.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Escenes (Pantalles)/M_Donkey.gd" type="Script" id=5]
 [ext_resource path="res://Escenes (Pantalles)/M_Duck.gd" type="Script" id=6]
 [ext_resource path="res://Escenes (Pantalles)/Exit_Door.gd" type="Script" id=7]
-[ext_resource path="res://Escenes (Pantalles)/Global.gd" type="Script" id=8]
 [ext_resource path="res://Escenes (Pantalles)/Galaga_light.gd" type="Script" id=9]
 [ext_resource path="res://Escenes (Pantalles)/Donkey_light.gd" type="Script" id=10]
 [ext_resource path="res://Escenes (Pantalles)/Duck_light.gd" type="Script" id=11]
@@ -25,7 +24,6 @@ extents = Vector2( 51, 168.75 )
 extents = Vector2( 231, 205.5 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 8 )
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2( 2389.44, 497.125 )
@@ -121,48 +119,46 @@ texture = ExtResource( 2 )
 color = Color( 0, 0.643137, 0.298039, 1 )
 energy = 2.1
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Galaga" type="Area2D" parent="."]
 script = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Galaga"]
 position = Vector2( 1683, 675.75 )
 shape = SubResource( 3 )
 
-[node name="Area2D2" type="Area2D" parent="."]
-visible = false
+[node name="Donkey" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Donkey"]
 position = Vector2( 2819, 678 )
 shape = SubResource( 3 )
 
-[node name="Area2D3" type="Area2D" parent="."]
-visible = false
+[node name="Duck" type="Area2D" parent="."]
 script = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Duck"]
 position = Vector2( 4428, 676 )
 shape = SubResource( 3 )
 
-[node name="Area2D4" type="Area2D" parent="."]
+[node name="Door" type="Area2D" parent="."]
 script = ExtResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2( 1189, 643.5 )
 shape = SubResource( 4 )
 
 [node name="Jugador" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4382, 647 )
+position = Vector2( 1617, 644 )
 scale = Vector2( 6, 6 )
 
 [node name="Camera2D" type="Camera2D" parent="Jugador"]
 current = true
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D3" to="Area2D3" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D4" to="Area2D4" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Galaga" to="Galaga" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Galaga" to="Galaga" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Donkey" to="Donkey" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Donkey" to="Donkey" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Duck" to="Duck" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Duck" to="Duck" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Door" to="Door" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Door" to="Door" method="_on_Area2D_body_exited"]

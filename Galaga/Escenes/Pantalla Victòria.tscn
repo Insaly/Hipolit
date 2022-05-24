@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Galaga/Assets/16pxl font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Galaga/Assets/Patricio.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/PantallaArcade.png" type="Texture" id=3]
+[ext_resource path="res://Galaga/Escenes/Pantalla fracas.gd" type="Script" id=4]
+[ext_resource path="res://Galaga/Assets/logo.png" type="Texture" id=5]
+[ext_resource path="res://Donkey Kong/Assets/black_tile.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 4 ), null, null ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Pantalla Victòria" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="estrelles" type="TextureRect" parent="."]
+self_modulate = Color( 0.360784, 0.360784, 0.360784, 1 )
+margin_right = 1827.0
+margin_bottom = 1066.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Maquina" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1082.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 695.0
+margin_top = 395.0
+margin_right = 1318.0
+margin_bottom = 677.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "
+Presiona 'z' per jugar
+"
+
+[node name="Text2" type="Label" parent="."]
+margin_left = 865.0
+margin_top = 621.0
+margin_right = 961.0
+margin_bottom = 710.0
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 3 )
+text = "\"D\" - Dreta
+\"A\" - Esquerra
+\"X\" - Disparar"
+
+[node name="Titol" type="TextureRect" parent="."]
+margin_left = 810.0
+margin_top = 251.0
+margin_right = 1131.0
+margin_bottom = 427.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 957, 501 )
+scale = Vector2( 67.5, 10.25 )
+frames = SubResource( 5 )
+frame = 2
+speed_scale = 0.5
+playing = true

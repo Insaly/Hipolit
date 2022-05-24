@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 
-var velocitat_base = 170
+var velocitat_base = 100
 var velocitat = Vector2.ZERO
 
 var direccio = Vector2.DOWN
 var gravetat = Vector2.DOWN * 980
-var velocitat_salt = -240
+var velocitat_salt = -270
 var contador_absurd = 0
 var escales = false
 var animacio = false
@@ -68,7 +68,6 @@ func _on_Deteccions_body_exited(body):
 	body.set_collision_mask_bit(12, true)
 
 func _on_MortDeteccio_body_entered(body):
-	print("AAA MORT")
 	if body is KinematicBody2D:
 		contador_absurd += 1
 
@@ -94,3 +93,7 @@ func _on_MortBuit_body_entered(body):
 
 func _on_Area2D_body_entered(body):
 	contador_absurd += 1
+
+
+func _on_Area3D_body_entered(body):
+	get_tree().change_scene("res://Donkey Kong/Escenes/PantallaVictòria.tscn")
