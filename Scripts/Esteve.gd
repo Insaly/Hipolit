@@ -6,7 +6,7 @@ var direccio = Vector2.DOWN
 var gravetat = Vector2.DOWN * 1200
 
 func _ready():
-	pass # Replace with function body.
+	self.position = Global.posicio
 
 func _physics_process(delta):
 	velocitat.x = 0
