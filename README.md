@@ -5,8 +5,7 @@ Una falla elèctrica causa que el protagonista (tècnic elèctric) es quedi tanc
 Característiques:
  - Estil art pixelat 💪
  - 3 mini jocs clàssics dels anys 80
- - Mapa 'top-down' com a interfície d'usuari (El personatge es mou dins una sala de màquines recreatives)
- - Si volem complicar el joc podem afegir-hi trencacaps per poder passar de sales.
+ - Mapa 2D liniar com a interfície d'usuari (El personatge es mou dins una sala de màquines recreatives)
 
 A fer llista: 📝
  - 1r. Buscar assets
