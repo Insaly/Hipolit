@@ -8,4 +8,4 @@ func _on_Player_generar_proj(location):
 	add_child(p)
 
 func _on_Duraciojoc_timeout():
-	get_tree().change_scene("res://Galaga/Escenes/MenuGalga.tscn")
+	get_tree().change_scene("res://Galaga/Escenes/Pantalla fracas.tscn")

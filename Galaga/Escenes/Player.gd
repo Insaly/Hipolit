@@ -32,7 +32,7 @@ func _on_Player_area_entered(area):
 func _on_AnimatedSprite_animation_finished():
 	$AnimatedSprite.stop()
 	$AnimatedSprite.set_visible(false)
-	get_tree().change_scene("res://Escenes (Pantalles)/Galaga.tscn")
+	get_tree().change_scene("res://Galaga/Escenes/Pantalla fracas.tscn")
 	
 func rebre_mal(mal):
 	vides -= mal

@@ -12,11 +12,11 @@ font_data = ExtResource( 5 )
 [sub_resource type="Theme" id=1]
 default_font = SubResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=7]
 font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=3]
-default_font = SubResource( 2 )
+default_font = SubResource( 7 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
@@ -75,5 +75,6 @@ texture = ExtResource( 3 )
 position = Vector2( 969, 501 )
 scale = Vector2( 64.5, 10.25 )
 frames = SubResource( 5 )
+frame = 1
 speed_scale = 0.5
 playing = true
