@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Donkey Kong/TilemapAssets.tres" type="TileSet" id=1]
 [ext_resource path="res://Donkey Kong/Escenes/Mario.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/PantallaArcade2.png" type="Texture" id=3]
 [ext_resource path="res://Donkey Kong/Escenes/Monkey.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Donkey Kong/Assets/pauline.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 4, 4.5 )
@@ -43,6 +44,18 @@ extents = Vector2( 1019, 44.375 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 6.5, 19 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 16, 24 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 
@@ -191,6 +204,11 @@ scale = Vector2( 2, 2 )
 position = Vector2( 960.275, 541 )
 scale = Vector2( 4.50833, 4.50833 )
 texture = ExtResource( 3 )
+
+[node name="Pauline" type="AnimatedSprite" parent="."]
+position = Vector2( 930, 292 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 15 )
 
 [connection signal="body_entered" from="Deteccions" to="Mario" method="_on_Deteccions_body_entered"]
 [connection signal="body_exited" from="Deteccions" to="Mario" method="_on_Deteccions_body_exited"]

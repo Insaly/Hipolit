@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Duck Hunt/Assets/1st Background.png" type="Texture" id=1]
 [ext_resource path="res://Duck Hunt/Assets/1st_Background-removebg-preview.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Duck Hunt/Escenes/Escena principal.gd" type="Script" id=8]
 [ext_resource path="res://Duck Hunt/Assets/Material Duck Hunt/PressStart2P.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Duck Hunt/Assets/3hearts.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/PantallaArcade3.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -139,6 +140,11 @@ custom_fonts/font = SubResource( 2 )
 text = "ROUND 1"
 align = 1
 valign = 1
+
+[node name="PantallaArcade3" type="Sprite" parent="."]
+position = Vector2( 382.775, 361 )
+scale = Vector2( 4.50833, 4.50833 )
+texture = ExtResource( 11 )
 
 [connection signal="timeout" from="Start_timer" to="." method="_on_Start_timer_timeout"]
 [connection signal="timeout" from="Round_end_timer" to="." method="_on_Round_end_timer_timeout"]
