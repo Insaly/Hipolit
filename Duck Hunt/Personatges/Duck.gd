@@ -4,7 +4,7 @@ var vel = Vector2()
 var speed = 0
 var dir := Vector2.RIGHT
 var angle = 0
-var mouse_in = true
+var mouse_in = false
 var cacat = false
 var caient = false
 
@@ -20,14 +20,10 @@ func _ready():
 
 func _process(delta):
 	if cacat:
-		dir = Vector2(0,0)
-		$AnimatedSprite.play("Impacte")
-		$Mort.start()
-		
-	elif caient:
+		dir = Vector2.ZERO
+	if caient:
 		dir = Vector2.DOWN
-		$AnimatedSprite.play("Mort")
-		$Mort2.start()
+		speed = 300
 	else:
 		if is_on_wall():
 			dir.x *= -1
@@ -46,10 +42,18 @@ func anima(vel):
 	elif vel.x < 0:
 		$AnimatedSprite.flip_h = true
 	
+	
 	if rad2deg(angle) > 30 or rad2deg(angle) < -30 and (abs(vel.x) > 0 or abs(vel.y) > 0):
 		$AnimatedSprite.play("Vol amunt")
 	elif rad2deg(angle) <= 30 and rad2deg(angle) >= -30 and (abs(vel.x) > 0 or abs(vel.y) > 0):
 		$AnimatedSprite.play("Vol horitzontal")
+	
+	if vel.x == 0 and vel.y == 0 and cacat:
+		$AnimatedSprite.play("Impacte")
+		$Mort.start()
+	if vel.x == 0 and vel.y > 0:
+		$AnimatedSprite.play("Mort")
+		$Mort2.start()
 
 func change_dir():
 	angle = rand_range((-1.0/3)*PI,(1.0/3)*PI) + ((randi() % 2) * 180)
@@ -73,8 +77,7 @@ func _on_Duck_mouse_exited():
 
 
 func _on_Mort_timeout():
-	cacat = false
-	caient = true
+	queue_free()
 
 
 func _on_Mort2_timeout():

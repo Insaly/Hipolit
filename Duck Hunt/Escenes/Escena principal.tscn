@@ -1,27 +1,36 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Duck Hunt/Assets/1st Background.png" type="Texture" id=1]
 [ext_resource path="res://Duck Hunt/Assets/1st_Background-removebg-preview.png" type="Texture" id=2]
-[ext_resource path="res://Duck Hunt/Personatges/Duck.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Duck Hunt/Personatges/Duck2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Duck Hunt/Escenes/limit.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Duck Hunt/Assets/m29.TTF" type="DynamicFontData" id=5]
 [ext_resource path="res://Duck Hunt/Assets/NES - Duck Hunt - Backgrounds (1).png" type="Texture" id=6]
 [ext_resource path="res://Duck Hunt/Assets/Bullets.png" type="Texture" id=7]
+[ext_resource path="res://Duck Hunt/Escenes/Escena principal.gd" type="Script" id=8]
+[ext_resource path="res://Duck Hunt/Assets/Material Duck Hunt/PressStart2P.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Duck Hunt/Assets/3hearts.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
+extra_spacing_char = 4
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 9 )
+
 [node name="Node2D" type="Node2D"]
+position = Vector2( 577.5, 180 )
+script = ExtResource( 8 )
+Duck2 = ExtResource( 3 )
 
 [node name="1StBackground" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Duck" parent="." instance=ExtResource( 3 )]
-position = Vector2( 366, 244 )
-scale = Vector2( 0.7, 0.7 )
+[node name="Anecs" type="Node2D" parent="."]
 
 [node name="Background" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )
@@ -55,30 +64,32 @@ position = Vector2( 363, -18 )
 scale = Vector2( 20, 0.1 )
 
 [node name="limit4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 380, 527 )
+position = Vector2( 370, 695 )
 scale = Vector2( 20, 0.1 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
 
-[node name="R1" type="Label" parent="Control"]
-margin_left = 120.0
-margin_top = 576.0
-margin_right = 148.0
-margin_bottom = 600.0
+[node name="Score" type="Label" parent="Control"]
+margin_left = 575.0
+margin_top = 624.0
+margin_right = 720.0
+margin_bottom = 648.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-align = 1
+text = "123456"
+align = 2
 valign = 1
 
-[node name="R2" type="Label" parent="Control"]
-margin_left = 144.0
+[node name="Round" type="Label" parent="Control"]
+margin_left = 120.0
 margin_top = 576.0
-margin_right = 172.0
+margin_right = 168.0
 margin_bottom = 600.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-align = 1
+text = "23"
+align = 2
 valign = 1
 
 [node name="Bullets" type="TextureProgress" parent="."]
@@ -88,7 +99,8 @@ margin_right = 96.0
 margin_bottom = 632.0
 rect_scale = Vector2( 3, 3 )
 max_value = 3.0
-value = 3.0
+value = 2.0
+rounded = true
 texture_progress = ExtResource( 7 )
 
 [node name="Hits" type="TextureProgress" parent="."]
@@ -100,5 +112,34 @@ rect_scale = Vector2( 3, 3 )
 max_value = 10.0
 texture_progress = ExtResource( 6 )
 
-[connection signal="mouse_entered" from="Duck" to="Duck" method="_on_Duck_mouse_entered"]
-[connection signal="mouse_exited" from="Duck" to="Duck" method="_on_Duck_mouse_exited"]
+[node name="Lives" type="TextureProgress" parent="."]
+margin_left = 191.0
+margin_top = 649.0
+margin_right = 239.0
+margin_bottom = 665.0
+rect_scale = Vector2( 1.5, 1.5 )
+max_value = 3.0
+value = 3.0
+texture_progress = ExtResource( 10 )
+
+[node name="Start_timer" type="Timer" parent="."]
+
+[node name="Round_end_timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Timeout_timer" type="Timer" parent="."]
+wait_time = 16.0
+
+[node name="Round_title" type="Label" parent="."]
+margin_left = 276.0
+margin_top = 258.0
+margin_right = 500.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 2 )
+text = "ROUND 1"
+align = 1
+valign = 1
+
+[connection signal="timeout" from="Start_timer" to="." method="_on_Start_timer_timeout"]
+[connection signal="timeout" from="Round_end_timer" to="." method="_on_Round_end_timer_timeout"]
+[connection signal="timeout" from="Timeout_timer" to="." method="_on_Timeout_timer_timeout"]

@@ -27,3 +27,5 @@ Assets:
  - https://tilation.itch.io/16x16-small-indoor-tileset
  - https://groovymaster.itch.io/groovys-50-retro-sound-effects-package
  - https://www.spriters-resource.com/nes/duckhunt/
+ - <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+ - https://opengameart.org/content/heart-pixel-art Credit DanSevenStar.xyz (Hearts Duck Hunt)

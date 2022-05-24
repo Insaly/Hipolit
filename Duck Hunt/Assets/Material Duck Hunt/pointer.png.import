@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JugadorNormal.png-05601bcdce68189489675a78d34dd3c6.stex"
+path="res://.import/pointer.png-e0bf561bef673a615cd62c01c4dce7fb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JugadorNormal.png"
-dest_files=[ "res://.import/JugadorNormal.png-05601bcdce68189489675a78d34dd3c6.stex" ]
+source_file="res://Duck Hunt/Assets/Material Duck Hunt/pointer.png"
+dest_files=[ "res://.import/pointer.png-e0bf561bef673a615cd62c01c4dce7fb.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

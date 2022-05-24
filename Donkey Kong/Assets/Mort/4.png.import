@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JugadorNormal.png-05601bcdce68189489675a78d34dd3c6.stex"
+path="res://.import/4.png-644f292f0b36fb57e279563a8bff4007.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JugadorNormal.png"
-dest_files=[ "res://.import/JugadorNormal.png-05601bcdce68189489675a78d34dd3c6.stex" ]
+source_file="res://Donkey Kong/Assets/Mort/4.png"
+dest_files=[ "res://.import/4.png-644f292f0b36fb57e279563a8bff4007.stex" ]
 
 [params]
 
