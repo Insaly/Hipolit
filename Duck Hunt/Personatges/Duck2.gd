@@ -24,6 +24,7 @@ func _ready():
 	
 func _process(delta):
 	if cached:
+		$Anec1SFX.play()
 		get_parent().get_parent().anecs_morts += 1
 		get_parent().get_parent().anecs_totals += 1
 		dir = Vector2.ZERO
@@ -33,6 +34,7 @@ func _process(delta):
 		cached = false
 		caient = true
 	elif caient:
+		$Anec2SFX.play()
 		speed = 0
 		dir = Vector2.DOWN
 		if go:

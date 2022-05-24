@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/caient.wav-4a9c77255b23c86cafc58621e95f7ba1.sample"
+
+[deps]
+
+source_file="res://Duck Hunt/caient.wav"
+dest_files=[ "res://.import/caient.wav-4a9c77255b23c86cafc58621e95f7ba1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
