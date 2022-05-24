@@ -21,12 +21,12 @@ func _ready():
 func _process(delta):
 	if ronda_over:
 		if vides <= 0:
-			$DerrotaSFX.play()
+#			$DerrotaSFX.play()
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena GameOver.tscn")
 		if ronda == 10:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena Victòria.tscn")
 		if ronda_lost == false:
-			$RondaSFX.play()
+#			$RondaSFX.play()
 			ronda += 1
 		else:
 			ronda_lost = false

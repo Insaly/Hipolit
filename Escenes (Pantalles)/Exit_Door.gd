@@ -7,7 +7,7 @@ func _ready():
 
 func _process(delta):
 	if dins and Global.duck and Global.galaga and Global.donkey and Input.is_action_just_pressed("Tecla_x"):
-		get_tree().change_scene("res://Galaga/Escenes/Pantalla fracas.tscn")
+		get_tree().change_scene("res://Escenes (Pantalles)/Game Over.tscn")
 
 func _on_Area2D_body_entered(body):
 	dins = true

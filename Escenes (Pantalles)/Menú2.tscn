@@ -41,14 +41,15 @@ theme = ExtResource( 3 )
 text = "Enrere"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 765.0
-margin_top = 400.0
-margin_right = 1163.0
-margin_bottom = 598.0
+margin_left = 708.0
+margin_top = 396.0
+margin_right = 1249.0
+margin_bottom = 661.0
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "\"X\" - Interactuar
 \"D\" - Dreta
-\"A\" - Esquerra"
+\"A\" - Esquerra
+\"ESC\" - Sortir del joc"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
