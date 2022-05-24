@@ -24,6 +24,10 @@ config/name="Hipòlit"
 run/main_scene="res://Escenes (Pantalles)/Galaga.tscn"
 config/icon="res://logo.png"
 
+[autoload]
+
+Global="*res://Escenes (Pantalles)/Global.gd"
+
 [display]
 
 window/size/width=1920
