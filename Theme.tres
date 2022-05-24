@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=2]
+
+[ext_resource path="res://Galaga/Assets/16pxl font.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=5]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[resource]
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0.313726, 0.313726, 0.313726, 1 )
+Button/fonts/font = SubResource( 5 )
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
