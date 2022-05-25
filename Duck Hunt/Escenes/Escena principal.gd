@@ -35,7 +35,7 @@ func _process(delta):
 		$Bullets.value = 3
 		
 		$Round_title.visible = true
-		$Round_title.text = "ROUND " + str(ronda)
+		$Round_title.text = "RONDA " + str(ronda)
 		$Control/Round.text = str(ronda)
 		
 		$Start_timer.wait_time = 2

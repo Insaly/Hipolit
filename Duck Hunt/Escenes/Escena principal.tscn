@@ -139,7 +139,7 @@ margin_top = 258.0
 margin_right = 500.0
 margin_bottom = 351.0
 custom_fonts/font = SubResource( 2 )
-text = "ROUND 1"
+text = "RONDA 1"
 align = 1
 valign = 1
 

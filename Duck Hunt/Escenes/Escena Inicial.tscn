@@ -54,7 +54,7 @@ margin_top = 306.0
 margin_right = 695.0
 margin_bottom = 399.0
 custom_fonts/font = SubResource( 2 )
-text = "PRESS ENTER TO PLAY"
+text = "PREM \"ENTER\" PER COMENÇAR"
 align = 1
 valign = 1
 
