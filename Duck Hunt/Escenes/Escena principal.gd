@@ -21,12 +21,11 @@ func _ready():
 func _process(delta):
 	if ronda_over:
 		if vides <= 0:
-#			$DerrotaSFX.play()
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena GameOver.tscn")
 		if ronda == 10:
 			get_tree().change_scene("res://Duck Hunt/Escenes/Escena Victòria.tscn")
 		if ronda_lost == false:
-#			$RondaSFX.play()
+			$RondaSFX.play()
 			ronda += 1
 		else:
 			ronda_lost = false
@@ -47,7 +46,7 @@ func _process(delta):
 		pass
 	else:
 		if Input.is_action_just_pressed("Clic"):
-			
+			$TretSFX.play()
 			bales_restants -= 1
 			$Bullets.value = (bales_restants/(3.0+ronda))*3
 			if bales_restants <= 0:

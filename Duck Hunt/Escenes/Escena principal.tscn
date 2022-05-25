@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Duck Hunt/Assets/1st Background.png" type="Texture" id=1]
 [ext_resource path="res://Duck Hunt/Assets/1st_Background-removebg-preview.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Duck Hunt/Assets/Material Duck Hunt/PressStart2P.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Duck Hunt/Assets/3hearts.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/PantallaArcade3.png" type="Texture" id=11]
+[ext_resource path="res://Duck Hunt/tret.wav" type="AudioStream" id=12]
+[ext_resource path="res://Duck Hunt/finalronda.wav" type="AudioStream" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -145,6 +147,14 @@ valign = 1
 position = Vector2( 382.775, 361 )
 scale = Vector2( 4.50833, 4.50833 )
 texture = ExtResource( 11 )
+
+[node name="TretSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -20.0
+
+[node name="RondaSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -20.0
 
 [connection signal="timeout" from="Start_timer" to="." method="_on_Start_timer_timeout"]
 [connection signal="timeout" from="Round_end_timer" to="." method="_on_Round_end_timer_timeout"]

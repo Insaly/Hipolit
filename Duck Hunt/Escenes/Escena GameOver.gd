@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	$DerrotaSFX.play()
 	pass
 	
 func _process(delta):

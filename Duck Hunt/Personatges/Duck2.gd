@@ -34,10 +34,10 @@ func _process(delta):
 		cached = false
 		caient = true
 	elif caient:
-		$Anec2SFX.play()
 		speed = 0
 		dir = Vector2.DOWN
 		if go:
+			$Anec2SFX.play()
 			speed = 200
 			dir = Vector2.DOWN
 			$AnimatedSprite.play("Mort")

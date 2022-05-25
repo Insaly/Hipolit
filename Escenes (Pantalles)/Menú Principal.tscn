@@ -80,8 +80,8 @@ scale = Vector2( 4.85093, 4.85093 )
 position = Vector2( -277.563, -30.1231 )
 scale = Vector2( 0.144302, 0.144302 )
 texture = ExtResource( 2 )
-color = Color( 0, 0.643137, 0.298039, 1 )
-energy = 2.1
+color = Color( 0, 0.552941, 0.643137, 1 )
+energy = 2.7
 script = ExtResource( 9 )
 
 [node name="Duck" type="Light2D" parent="Lights"]
