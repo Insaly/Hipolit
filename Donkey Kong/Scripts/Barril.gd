@@ -19,4 +19,5 @@ func _physics_process(delta):
 		$AnimatedSprite.play("mou_esquerr")
 
 func _on_Area2D_area_entered(area):
-	velocitat.x = -velocitat.x
+	if area.is_in_group("CanviDir"):
+		velocitat.x = -velocitat.x

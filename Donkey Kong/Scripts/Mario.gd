@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 var velocitat_base = 100
 var velocitat = Vector2.ZERO
 
@@ -93,7 +92,6 @@ func _on_MortBuit_body_entered(body):
 
 func _on_Area2D_body_entered(body):
 	contador_absurd += 1
-
 
 func _on_Area3D_body_entered(body):
 	get_tree().change_scene("res://Donkey Kong/Escenes/PantallaVictòria.tscn")

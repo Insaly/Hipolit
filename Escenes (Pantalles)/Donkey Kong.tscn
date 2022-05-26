@@ -154,27 +154,27 @@ collision_mask = 1024
 position = Vector2( 964, 1179.63 )
 shape = SubResource( 10 )
 
-[node name="CanviDir" type="Area2D" parent="."]
+[node name="CanviDir" type="Area2D" parent="." groups=["CanviDir"]]
 collision_layer = 32768
 collision_mask = 2048
 
-[node name="CanviDir5" type="CollisionShape2D" parent="CanviDir"]
+[node name="CanviDir5" type="CollisionShape2D" parent="CanviDir" groups=["CanviDir"]]
 position = Vector2( 1226, 793 )
 shape = SubResource( 11 )
 
-[node name="CanviDir4" type="CollisionShape2D" parent="CanviDir"]
+[node name="CanviDir4" type="CollisionShape2D" parent="CanviDir" groups=["CanviDir"]]
 position = Vector2( 708, 685 )
 shape = SubResource( 11 )
 
-[node name="CanviDir3" type="CollisionShape2D" parent="CanviDir"]
+[node name="CanviDir3" type="CollisionShape2D" parent="CanviDir" groups=["CanviDir"]]
 position = Vector2( 1224, 602 )
 shape = SubResource( 11 )
 
-[node name="CanviDir2" type="CollisionShape2D" parent="CanviDir"]
+[node name="CanviDir2" type="CollisionShape2D" parent="CanviDir" groups=["CanviDir"]]
 position = Vector2( 711, 516 )
 shape = SubResource( 11 )
 
-[node name="CanviDir1" type="CollisionShape2D" parent="CanviDir"]
+[node name="CanviDir1" type="CollisionShape2D" parent="CanviDir" groups=["CanviDir"]]
 position = Vector2( 1176, 424 )
 shape = SubResource( 11 )
 

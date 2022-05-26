@@ -101,13 +101,16 @@ energy = 3.31
 script = ExtResource( 10 )
 
 [node name="Light2D2" type="Light2D" parent="Lights"]
+light_mask = 2
 position = Vector2( 419.623, 25.9055 )
 scale = Vector2( 0.111126, 0.118818 )
 texture = ExtResource( 2 )
 color = Color( 0, 0.643137, 0.298039, 1 )
 energy = 1.97
+shadow_item_cull_mask = 2
 
 [node name="Light2D3" type="Light2D" parent="Lights"]
+light_mask = 2
 position = Vector2( 91.4382, 26.1548 )
 scale = Vector2( 0.144302, 0.144302 )
 texture = ExtResource( 2 )
@@ -115,11 +118,14 @@ color = Color( 0, 0.643137, 0.298039, 1 )
 energy = 2.1
 
 [node name="Light2D4" type="Light2D" parent="Lights"]
+light_mask = 2
 position = Vector2( -145.011, 26.3609 )
 scale = Vector2( 0.144302, 0.144302 )
 texture = ExtResource( 2 )
 color = Color( 0, 0.643137, 0.298039, 1 )
 energy = 2.1
+shadow_enabled = true
+shadow_item_cull_mask = 2
 
 [node name="Galaga" type="Area2D" parent="."]
 script = ExtResource( 4 )

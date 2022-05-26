@@ -9,6 +9,12 @@ func _ready():
 	$Timer.start()
 	i += 1
 
+func _process(delta):
+	if Input.is_action_just_pressed("Tecla_enter"):
+		$Timer.stop()
+		$Timer.wait_time = 0.1
+		$Timer.start()
+
 func _on_Timer_timeout():
 	if i == 1:
 		$Timer.stop()
