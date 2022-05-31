@@ -3,6 +3,7 @@ extends Node2D
 var i = 0
 
 func _ready():
+	$AudioStreamPlayer.play()
 	i = 0
 	$Timer.wait_time = 3
 	$Label.text = "Era un càlid dilluns de juliol."
@@ -10,6 +11,9 @@ func _ready():
 	i += 1
 
 func _process(delta):
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
+		
 	if Input.is_action_just_pressed("Tecla_enter"):
 		$Timer.stop()
 		$Timer.wait_time = 0.1

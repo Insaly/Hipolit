@@ -1,12 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/PantallaArcade4.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Història.gd" type="Script" id=2]
+[ext_resource path="res://SFX/menumusic.wav" type="AudioStream" id=3]
 [ext_resource path="res://Galaga/Assets/16pxl font.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sprites/ColorRect.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), null, null, null, null, null, null ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -38,5 +52,24 @@ autowrap = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 771.0
+margin_top = 787.0
+margin_right = 1161.0
+margin_bottom = 825.0
+custom_fonts/font = SubResource( 2 )
+text = "Prem \"Enter\" per a continuar"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 967, 798 )
+scale = Vector2( 0.799145, 0.533058 )
+frames = SubResource( 3 )
+frame = 3
+playing = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

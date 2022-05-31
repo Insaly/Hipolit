@@ -21,6 +21,11 @@ func _physics_process(delta):
 	anima(velocitat)
 
 func anima(velocitat):
+	if velocitat.x != 0 and $footstep.playing == false:
+		$footstep.play()
+	elif velocitat.x == 0:
+		$footstep.stop()
+		
 	if velocitat.x > 0:
 		$AnimatedSprite.flip_h = false
 	elif velocitat.x < 0:
