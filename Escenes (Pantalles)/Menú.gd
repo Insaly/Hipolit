@@ -23,3 +23,9 @@ func _on_Button2_mouse_entered():
 
 func _on_Button3_mouse_entered():
 	$AudioStreamPlayer.play()
+
+func _on_Button4_mouse_entered():
+	$AudioStreamPlayer.play()
+
+func _on_Button4_pressed():
+	OS.window_fullscreen = !OS.window_fullscreen
