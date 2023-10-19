@@ -1,9 +1,9 @@
 # Hipòlit
 
-Una falla elèctrica causa que el protagonista (tècnic elèctric) es quedi tancat dins d'una sala de màquines recreatives. Per sortir, ha de trobar les 3 úniques màquines enceses i passar-se els jocs. Un cop fet, l'electricitat torna i pot sortir.
+Una falla elèctrica provoca que el protagonista (un tècnic elèctric) es quedi tancat dins d'una sala de màquines recreatives. Per sortir, ha de trobar les 3 úniques màquines enceses i passar-se els jocs corresponents. Un cop fet, l'electricitat torna a fer funcionar la porta mecànica i pot sortir.
 
 Característiques:
- - Estil art pixelat 💪
+ - Estil pixel-art 💪
  - 3 mini jocs clàssics dels anys 80
  - Mapa 2D liniar com a interfície d'usuari (El personatge es mou dins una sala de màquines recreatives)
 
